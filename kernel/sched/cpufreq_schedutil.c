@@ -886,9 +886,9 @@ fail:
 	policy->governor_data = NULL;
 	sugov_clear_global_tunables();
 
- free_sg_policy:
 	mutex_unlock(&global_tunables_lock);
 
+free_sg_policy:
 	sugov_policy_free(sg_policy);
 
 disable_fast_switch:
